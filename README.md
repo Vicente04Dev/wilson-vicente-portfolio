@@ -1,58 +1,43 @@
-# Wilson Vicente — Web Designer & Desenvolvedor Full-Stack
+# Wilson Vicente — Portfolio
 
-Portfolio e site profissional de Wilson Vicente, especializado em soluções web para o mercado angolano.
+Site profissional de Wilson Vicente, web designer e desenvolvedor full-stack em Luanda, Angola.
 
-## Tecnologias
+Feito apenas com **HTML, CSS e JavaScript**: sem frameworks, sem dependências e sem passo de compilação.
 
-- [Vite](https://vitejs.dev/)
-- [React 18](https://react.dev/) + TypeScript
-- [Tailwind CSS](https://tailwindcss.com/)
-- [shadcn/ui](https://ui.shadcn.com/)
-- [Framer Motion](https://www.framer.com/motion/)
+## Ver o site localmente
 
-## Desenvolvimento local
-
-**Pré-requisitos:** Node.js 18+ e npm
+Abra o `index.html` com duplo clique. Para testar como num servidor real (página 404, `robots.txt`, etc.), use qualquer servidor estático, por exemplo:
 
 ```sh
-# 1. Instalar dependências
-npm install
-
-# 2. Configurar variáveis de ambiente
-cp .env.local.example .env.local
-# Editar .env.local com as chaves do EmailJS
-
-# 3. Iniciar servidor de desenvolvimento
-npm run dev
+php -S localhost:8000
 ```
 
-O site fica disponível em `http://localhost:5173`.
-
-## Variáveis de ambiente
-
-Criar `.env.local` com as seguintes variáveis para o formulário de contacto funcionar:
-
-```env
-VITE_EMAILJS_SERVICE_ID=your_service_id
-VITE_EMAILJS_TEMPLATE_ID=your_template_id
-VITE_EMAILJS_PUBLIC_KEY=your_public_key
-```
-
-## Build para produção
-
-```sh
-npm run build
-npm run preview
-```
-
-## Estrutura do projeto
+## Estrutura
 
 ```
-src/
-├── components/     # Secções da landing page
-│   └── ui/         # Componentes base (shadcn/ui)
-├── pages/          # Rotas (Index, NotFound)
-├── hooks/          # Custom hooks
-└── lib/            # Utilitários
-public/             # Assets estáticos
+index.html            Página principal (conteúdo, SEO e dados estruturados)
+404.html              Página de erro
+css/styles.css        Estilos, organizados por secções; cores do tema escuro e claro no topo
+js/main.js            Tema, menu, filtro do portfólio, FAQ e formulário de contacto
+js/config.js          Credenciais públicas do EmailJS e email de destino do formulário
+assets/portfolio/     Capturas dos projectos (WebP)
+assets/og-image.jpg   Imagem de partilha em redes sociais e WhatsApp
+favicon.*, icon-*.png, apple-touch-icon.png, site.webmanifest
+robots.txt, sitemap.xml, llms.txt
 ```
+
+## Formulário de contacto (EmailJS)
+
+O formulário envia as mensagens pelo [EmailJS](https://www.emailjs.com/), configurado em `js/config.js`.
+
+O email de destino é definido no painel do EmailJS. Em **Email Templates**, no template usado, o campo **To Email** deve ter `{{to_email}}` (ou directamente `wilson.vicente@wilsonvicente.com`) e o campo **Reply To** deve ter `{{reply_to}}`.
+
+A chave do EmailJS em `js/config.js` é pública por natureza: fica sempre visível no browser de quem visita o site.
+
+## Publicar
+
+Envie todos os ficheiros desta pasta (excepto `.git`) para a raiz do domínio, por exemplo em `public_html` na Hostinger. Configure a página de erro 404 do alojamento para usar `404.html`.
+
+Os endereços absolutos (link canónico, Open Graph, `sitemap.xml`, `robots.txt`, `llms.txt` e dados estruturados) usam `https://wilsonvicente.com/`. Se o domínio for outro, actualize-os.
+
+Depois de publicar, submeta `https://wilsonvicente.com/sitemap.xml` no Google Search Console.

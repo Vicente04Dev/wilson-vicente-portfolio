@@ -1,32 +1,997 @@
 <!doctype html>
-<html lang="pt">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="alternate icon" href="/favicon.ico" />
-    <title>Wilson Vicente — Web Designer & Desenvolvedor Full-Stack</title>
-    <meta name="description" content="Web Designer & Desenvolvedor Full-Stack especializado em sites profissionais, lojas virtuais e sistemas web em Angola. Luanda, Angola." />
-    <meta name="author" content="Wilson Vicente" />
+<html lang="pt-AO" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wilson Vicente — Criação de Sites e Sistemas Web em Luanda, Angola</title>
+  <meta name="description" content="Web designer e programador em Luanda. Criação de sites institucionais, lojas virtuais e sistemas web para empresas em Angola. Peça o seu orçamento.">
+  <meta name="author" content="Wilson Vicente">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://wilsonvicente.com/">
+  <meta name="theme-color" content="#0f1012">
+  <meta name="geo.region" content="AO-LUA">
+  <meta name="geo.placename" content="Luanda">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Wilson Vicente — Web Designer & Desenvolvedor Full-Stack" />
-    <meta property="og:description" content="Especializado em criar sites profissionais, sistemas web robustos e lojas virtuais que convertem visitantes em clientes em Angola." />
-    <meta property="og:type" content="website" />
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:site_name" content="Wilson Vicente">
+  <meta property="og:url" content="https://wilsonvicente.com/">
+  <meta property="og:title" content="Wilson Vicente — Criação de Sites e Sistemas Web em Angola">
+  <meta property="og:description" content="Sites institucionais, lojas virtuais e sistemas web à medida para empresas em Angola. Veja projectos reais e peça o seu orçamento.">
+  <meta property="og:image" content="https://wilsonvicente.com/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Wilson Vicente — Criação de sites e sistemas web em Luanda, Angola">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Wilson Vicente — Criação de Sites e Sistemas Web em Angola">
+  <meta name="twitter:description" content="Sites institucionais, lojas virtuais e sistemas web à medida para empresas em Angola.">
+  <meta name="twitter:image" content="https://wilsonvicente.com/assets/og-image.jpg">
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
 
-    <!-- Google Fonts: Syne (títulos) + DM Sans (corpo) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Syne:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400..700&family=JetBrains+Mono:wght@500&display=swap">
+  <link rel="preload" as="image" href="assets/portfolio/residencial.webp" type="image/webp">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    // Aplica o tema guardado antes de a página aparecer (escuro por padrão)
+    (function () {
+      var theme = 'dark';
+      try { theme = localStorage.getItem('theme') === 'light' ? 'light' : 'dark'; } catch (e) {}
+      var root = document.documentElement;
+      root.dataset.theme = theme;
+      root.classList.add('js');
+      document.querySelector('meta[name="theme-color"]').content = theme === 'light' ? '#f6f4ef' : '#0f1012';
+    })();
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://wilsonvicente.com/#website",
+      "url": "https://wilsonvicente.com/",
+      "name": "Wilson Vicente",
+      "inLanguage": "pt-AO",
+      "publisher": {
+        "@id": "https://wilsonvicente.com/#wilson-vicente"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://wilsonvicente.com/#pagina",
+      "url": "https://wilsonvicente.com/",
+      "name": "Wilson Vicente — Criação de Sites e Sistemas Web em Luanda, Angola",
+      "isPartOf": {
+        "@id": "https://wilsonvicente.com/#website"
+      },
+      "about": {
+        "@id": "https://wilsonvicente.com/#negocio"
+      },
+      "inLanguage": "pt-AO",
+      "primaryImageOfPage": "https://wilsonvicente.com/assets/og-image.jpg"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://wilsonvicente.com/#wilson-vicente",
+      "name": "Wilson Vicente",
+      "jobTitle": "Web Designer & Desenvolvedor Full-Stack",
+      "url": "https://wilsonvicente.com/",
+      "email": "mailto:wilson.vicente@wilsonvicente.com",
+      "telephone": "+244931601440",
+      "image": "https://wilsonvicente.com/assets/og-image.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Luanda",
+        "addressCountry": "AO"
+      },
+      "knowsAbout": [
+        "Web design",
+        "Desenvolvimento web",
+        "Criação de sites",
+        "Lojas virtuais",
+        "Sistemas web",
+        "SEO",
+        "PHP",
+        "Laravel",
+        "MySQL",
+        "JavaScript",
+        "CSS",
+        "Tailwind CSS",
+        "Bootstrap"
+      ],
+      "worksFor": {
+        "@id": "https://wilsonvicente.com/#negocio"
+      }
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://wilsonvicente.com/#negocio",
+      "name": "Wilson Vicente — Criação de Sites e Sistemas Web",
+      "description": "Web designer e programador full-stack em Luanda. Criação de sites institucionais, lojas virtuais, sistemas web e plataformas de reservas para empresas em Angola.",
+      "url": "https://wilsonvicente.com/",
+      "image": "https://wilsonvicente.com/assets/og-image.jpg",
+      "logo": "https://wilsonvicente.com/apple-touch-icon.png",
+      "email": "wilson.vicente@wilsonvicente.com",
+      "telephone": "+244931601440",
+      "priceRange": "A partir de 150.000 Kz",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Luanda",
+        "addressRegion": "Luanda",
+        "addressCountry": "AO"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Angola"
+      },
+      "founder": {
+        "@id": "https://wilsonvicente.com/#wilson-vicente"
+      },
+      "knowsLanguage": "pt",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Serviços de web design e desenvolvimento",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Site Institucional",
+              "description": "Ideal para empresas que querem marcar presença online com profissionalismo.",
+              "areaServed": {
+                "@type": "Country",
+                "name": "Angola"
+              }
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 150000,
+              "priceCurrency": "AOA"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Loja Virtual",
+              "description": "Para negócios que querem vender online com uma plataforma completa e segura.",
+              "areaServed": {
+                "@type": "Country",
+                "name": "Angola"
+              }
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 350000,
+              "priceCurrency": "AOA"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sistema Web",
+              "description": "Soluções à medida para automatizar processos e fazer o seu negócio crescer.",
+              "areaServed": {
+                "@type": "Country",
+                "name": "Angola"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Plataformas de Reservas",
+              "description": "Sistemas de agendamento online intuitivos para serviços, hotéis, restaurantes e consultórios.",
+              "areaServed": {
+                "@type": "Country",
+                "name": "Angola"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sites de Notícias",
+              "description": "Portais de informação modernos e dinâmicos, optimizados para gestão de conteúdo e grande volume de acessos.",
+              "areaServed": {
+                "@type": "Country",
+                "name": "Angola"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Blogs Profissionais",
+              "description": "Plataformas de conteúdo elegantes e funcionais, ideais para construir autoridade no seu nicho.",
+              "areaServed": {
+                "@type": "Country",
+                "name": "Angola"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://wilsonvicente.com/#portfolio",
+      "name": "Portfólio de projectos",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "CreativeWork",
+            "name": "Recrutamento Mwangolé",
+            "description": "Plataforma de recrutamento onde candidatos pesquisam vagas e acompanham as suas candidaturas, e as empresas publicam vagas e gerem todo o processo num único painel.",
+            "genre": "Sistema web",
+            "image": "https://wilsonvicente.com/assets/portfolio/recrutamento.webp",
+            "keywords": "Laravel, Livewire, MySQL, Tailwind CSS",
+            "creator": {
+              "@id": "https://wilsonvicente.com/#wilson-vicente"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "CreativeWork",
+            "name": "Residencial UTT",
+            "description": "Site e sistema de reservas para um residencial em Luanda: disponibilidade de quartos, reservas online, comprovativos de pagamento e painel de gestão com relatórios financeiros.",
+            "genre": "Sistema de reservas",
+            "image": "https://wilsonvicente.com/assets/portfolio/residencial.webp",
+            "keywords": "Laravel, Livewire, MySQL, Tailwind CSS, Alpine.js",
+            "creator": {
+              "@id": "https://wilsonvicente.com/#wilson-vicente"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "CreativeWork",
+            "name": "CGD LDA",
+            "description": "Site institucional para uma empresa de gráfica e design: serviços de impressão e branding, portfólio de trabalhos e pedido de orçamento.",
+            "genre": "Site institucional",
+            "image": "https://wilsonvicente.com/assets/portfolio/cgd.webp",
+            "keywords": "HTML, CSS, JavaScript",
+            "creator": {
+              "@id": "https://wilsonvicente.com/#wilson-vicente"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "CreativeWork",
+            "name": "Converta",
+            "description": "Site institucional para uma consultoria em Recursos Humanos e Advocacia, com páginas de serviços, apresentação da empresa e contactos.",
+            "genre": "Site institucional",
+            "image": "https://wilsonvicente.com/assets/portfolio/converta.webp",
+            "keywords": "HTML, CSS, JavaScript",
+            "creator": {
+              "@id": "https://wilsonvicente.com/#wilson-vicente"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "CreativeWork",
+            "name": "Vitala Clínica Geral",
+            "description": "Site para uma clínica médica em Luanda, com serviços, consultas e exames, e pedido de marcação de consultas online.",
+            "genre": "Site institucional",
+            "image": "https://wilsonvicente.com/assets/portfolio/vitala.webp",
+            "keywords": "HTML, CSS, JavaScript",
+            "creator": {
+              "@id": "https://wilsonvicente.com/#wilson-vicente"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://wilsonvicente.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quanto tempo demora a criação de um site?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O prazo varia conforme a complexidade do projecto. Um site institucional pode ficar pronto em 10 a 15 dias úteis. Lojas virtuais e sistemas web personalizados podem levar de 3 a 6 semanas. Após a análise do seu projecto, apresento um cronograma detalhado."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual é a forma de pagamento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Trabalho com pagamento dividido em fases: uma entrada no início do projecto e o restante na entrega final. Aceito transferência bancária e outros métodos de pagamento disponíveis em Angola. Os valores são apresentados em Kwanzas (Kz)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O site vai funcionar bem no telemóvel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Todos os sites que desenvolvo são 100% responsivos, ou seja, adaptam-se perfeitamente a qualquer dispositivo — telemóvel, tablet ou computador. A experiência do utilizador é prioridade em todos os projectos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que é SEO e por que é importante?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SEO (Search Engine Optimization) é o conjunto de técnicas que fazem o seu site aparecer nas primeiras posições do Google. Isto significa mais visibilidade, mais visitas e mais clientes a encontrar o seu negócio online. Todos os meus projectos incluem optimização SEO."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Oferece suporte após a entrega do site?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Todos os planos incluem um período de suporte técnico gratuito após a entrega. Além disso, ofereço planos de manutenção contínua para garantir que o seu site esteja sempre actualizado, seguro e a funcionar na perfeição."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso actualizar o conteúdo do site sozinho?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Claro. Os sites são desenvolvidos com painéis de gestão intuitivos que lhe permitem alterar textos, imagens e conteúdos de forma simples, sem necessidade de conhecimentos técnicos. Também forneço formação inicial para que se sinta à vontade."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Desenvolve lojas virtuais com sistema de pagamento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. As lojas virtuais que desenvolvo incluem integração com os principais sistemas de pagamento disponíveis em Angola, gestão de stock, encomendas e toda a estrutura necessária para vender online com segurança."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "É possível ter um sistema web personalizado para a minha empresa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Com certeza. Desenvolvo sistemas web à medida das necessidades do seu negócio — desde gestão de clientes, controlo de stock, agendamentos, relatórios e muito mais. Cada sistema é pensado para optimizar os processos da sua empresa."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-menu" viewBox="0 0 24 24"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></symbol>
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></symbol>
+    <symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></symbol>
+    <symbol id="i-newspaper" viewBox="0 0 24 24"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path><path d="M18 14h-8"></path><path d="M15 18h-5"></path><path d="M10 6h8v4h-8V6Z"></path></symbol>
+    <symbol id="i-book-open" viewBox="0 0 24 24"><path d="M12 7v14"></path><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></symbol>
+    <symbol id="i-shopping-cart" viewBox="0 0 24 24"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></symbol>
+    <symbol id="i-calendar-check" viewBox="0 0 24 24"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path><path d="m9 16 2 2 4-4"></path></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></symbol>
+    <symbol id="i-palette" viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></symbol>
+    <symbol id="i-trending-up" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></symbol>
+    <symbol id="i-headphones" viewBox="0 0 24 24"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"></path></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></symbol>
+    <symbol id="i-gauge" viewBox="0 0 24 24"><path d="m12 14 4-4"></path><path d="M3.34 19a10 10 0 1 1 17.32 0"></path></symbol>
+    <symbol id="i-smartphone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path></symbol>
+    <symbol id="i-code-2" viewBox="0 0 24 24"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></symbol>
+    <symbol id="i-bar-chart-3" viewBox="0 0 24 24"><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></symbol>
+    <symbol id="i-messages-square" viewBox="0 0 24 24"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2z"></path><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"></path></symbol>
+    <symbol id="i-file-text" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></symbol>
+    <symbol id="i-pen-tool" viewBox="0 0 24 24"><path d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z"></path><path d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18"></path><path d="m2.3 2.3 7.286 7.286"></path><circle cx="11" cy="11" r="2"></circle></symbol>
+    <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14"></path><path d="M12 5v14"></path></symbol>
+    <symbol id="i-check-circle-2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></symbol>
+    <symbol id="i-alert-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></symbol>
+  </svg>
+
+  <header class="header" id="header">
+    <div class="container header-row">
+      <a href="#" class="brand" aria-label="Wilson Vicente — início">
+        <span class="brand-mark" aria-hidden="true">WV</span>
+        <span class="brand-name">Wilson Vicente<span class="brand-dot">.</span></span>
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="#servicos">Serviços</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#processo">Processo</a>
+        <a href="#precos">Preços</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="header-actions">
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Mudar para tema claro">
+        <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun"></use></svg>
+        <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"></use></svg>
+      </button>
+      <a href="#contacto" class="btn btn-dark btn-sm header-cta">Pedir orçamento</a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menu">
+        <svg class="icon icon-open" aria-hidden="true"><use href="#i-menu"></use></svg>
+        <svg class="icon icon-close" aria-hidden="true"><use href="#i-x"></use></svg>
+      </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Menu">
+      <div class="container">
+        <ul>
+          <li><a href="#servicos">Serviços <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a></li>
+          <li><a href="#portfolio">Portfólio <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a></li>
+          <li><a href="#processo">Processo <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a></li>
+          <li><a href="#precos">Preços <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a></li>
+          <li><a href="#sobre">Sobre <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a></li>
+          <li><a href="#faq">Perguntas frequentes <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a></li>
+        </ul>
+        <a href="#contacto" class="btn btn-primary btn-block">Pedir orçamento</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div>
+          <p class="hero-kicker">Web Designer &amp; Desenvolvedor Full-Stack · Luanda</p>
+          <h1 id="hero-title">Sites profissionais e sistemas web para <span class="marker">empresas em Angola</span>.</h1>
+          <p class="hero-lead">Sou o Wilson Vicente. Desenho e desenvolvo sites institucionais, lojas virtuais e sistemas à medida — rápidos, seguros e preparados para serem encontrados no Google. Do primeiro esboço ao lançamento, trato de tudo.</p>
+          <div class="hero-actions">
+            <a href="#contacto" class="btn btn-primary">Pedir orçamento <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+            <a href="https://wa.me/244931601440?text=Ol%C3%A1%20Wilson%2C%20vi%20o%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20pedir%20um%20or%C3%A7amento." class="btn btn-outline" target="_blank" rel="noopener"><svg class="icon icon-fill" viewBox="0 0 24 24" aria-hidden="true" style="color:var(--whatsapp)"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Falar no WhatsApp</a>
+          </div>
+          <p class="hero-note">Orçamento personalizado e sem compromisso.</p>
+          <dl class="stats">
+            <div class="stat"><dt>Projectos entregues</dt><dd>50+</dd></div>
+            <div class="stat"><dt>Anos de experiência</dt><dd>8+</dd></div>
+            <div class="stat"><dt>Clientes satisfeitos</dt><dd>100%</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-visual">
+          <figure class="browser browser--main" style="margin:0">
+            <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+            <img src="assets/portfolio/residencial.webp" width="1200" height="900" alt="Página inicial do sistema de reservas Residencial UTT, desenvolvido por Wilson Vicente" fetchpriority="high">
+          </figure>
+          <figure class="browser browser--small" style="margin:0">
+            <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+            <img src="assets/portfolio/recrutamento.webp" width="1200" height="900" alt="Página inicial da plataforma Recrutamento Mwangolé, desenvolvida por Wilson Vicente">
+          </figure>
+          <p class="hero-caption"><strong>Residencial UTT</strong><span>Sistema de reservas · Laravel</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projectos recentes -->
+    <div class="clients">
+      <div class="container clients-row">
+        <p class="clients-label">Projectos recentes</p>
+        <ul class="clients-list">
+          <li>Recrutamento Mwangolé</li>
+          <li>Residencial UTT</li>
+          <li>CGD LDA</li>
+          <li>Converta</li>
+          <li>Vitala Clínica Geral</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Serviços -->
+    <section class="section" id="servicos" aria-labelledby="servicos-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Serviços</p>
+          <h2 class="h2" id="servicos-title">Soluções web completas para o seu negócio</h2>
+          <p class="lead">Desenvolvo projectos personalizados que combinam design cuidado, tecnologia robusta e boas práticas de SEO — para que o seu site traga resultados reais, não apenas visitas.</p>
+        </header>
+        <div class="services">
+          <article class="service reveal" style="--d:0.00s">
+            <div class="service-top"><span class="service-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-globe"></use></svg></span><span class="service-num">01</span></div>
+            <h3>Sites Institucionais</h3>
+            <p>Websites profissionais que transmitem credibilidade e fortalecem a presença digital da sua empresa.</p>
+          </article>
+          <article class="service reveal" style="--d:0.06s">
+            <div class="service-top"><span class="service-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-shopping-cart"></use></svg></span><span class="service-num">02</span></div>
+            <h3>Lojas Virtuais</h3>
+            <p>E-commerce completo e seguro, com experiência de compra optimizada para maximizar as suas vendas.</p>
+          </article>
+          <article class="service reveal" style="--d:0.12s">
+            <div class="service-top"><span class="service-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-settings"></use></svg></span><span class="service-num">03</span></div>
+            <h3>Sistemas Web</h3>
+            <p>Soluções personalizadas para automatizar processos e aumentar a produtividade do seu negócio.</p>
+          </article>
+          <article class="service reveal" style="--d:0.00s">
+            <div class="service-top"><span class="service-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-calendar-check"></use></svg></span><span class="service-num">04</span></div>
+            <h3>Plataformas de Reservas</h3>
+            <p>Sistemas de agendamento online intuitivos para serviços, hotéis, restaurantes e consultórios.</p>
+          </article>
+          <article class="service reveal" style="--d:0.06s">
+            <div class="service-top"><span class="service-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-newspaper"></use></svg></span><span class="service-num">05</span></div>
+            <h3>Sites de Notícias</h3>
+            <p>Portais de informação modernos e dinâmicos, optimizados para gestão de conteúdo e grande volume de acessos.</p>
+          </article>
+          <article class="service reveal" style="--d:0.12s">
+            <div class="service-top"><span class="service-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-book-open"></use></svg></span><span class="service-num">06</span></div>
+            <h3>Blogs Profissionais</h3>
+            <p>Plataformas de conteúdo elegantes e funcionais, ideais para construir autoridade no seu nicho.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfólio -->
+    <section class="section section--white" id="portfolio" aria-labelledby="portfolio-title">
+      <div class="container">
+        <div class="portfolio-head">
+          <header class="section-head reveal">
+            <p class="eyebrow">Portfólio</p>
+            <h2 class="h2" id="portfolio-title">Projectos reais, para empresas reais</h2>
+          </header>
+          <div class="filters reveal" role="group" aria-label="Filtrar projectos por categoria">
+            <button type="button" class="filter" data-filter="Todos" aria-pressed="true">Todos<span class="filter-count">5</span></button>
+            <button type="button" class="filter" data-filter="Sistemas" aria-pressed="false">Sistemas<span class="filter-count">2</span></button>
+            <button type="button" class="filter" data-filter="Institucionais" aria-pressed="false">Institucionais<span class="filter-count">3</span></button>
+          </div>
+        </div>
+        <div class="projects">
+          <article class="project reveal" data-category="Sistemas" style="--d:0.00s">
+            <div class="browser">
+              <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+              <img src="assets/portfolio/recrutamento.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Página inicial do projecto Recrutamento Mwangolé, desenvolvido por Wilson Vicente">
+            </div>
+            <div>
+              <p class="project-meta"><span class="project-cat">Sistema web</span></p>
+              <h3>Recrutamento Mwangolé</h3>
+              <p>Plataforma de recrutamento onde candidatos pesquisam vagas e acompanham as suas candidaturas, e as empresas publicam vagas e gerem todo o processo num único painel.</p>
+              <ul class="project-stack" aria-label="Tecnologias usadas"><li class="tag">Laravel</li><li class="tag">Livewire</li><li class="tag">MySQL</li><li class="tag">Tailwind CSS</li></ul>
+            </div>
+          </article>
+          <article class="project reveal" data-category="Sistemas" style="--d:0.08s">
+            <div class="browser">
+              <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+              <img src="assets/portfolio/residencial.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Página inicial do projecto Residencial UTT, desenvolvido por Wilson Vicente">
+            </div>
+            <div>
+              <p class="project-meta"><span class="project-cat">Sistema de reservas</span></p>
+              <h3>Residencial UTT</h3>
+              <p>Site e sistema de reservas para um residencial em Luanda: disponibilidade de quartos, reservas online, comprovativos de pagamento e painel de gestão com relatórios financeiros.</p>
+              <ul class="project-stack" aria-label="Tecnologias usadas"><li class="tag">Laravel</li><li class="tag">Livewire</li><li class="tag">MySQL</li><li class="tag">Tailwind CSS</li><li class="tag">Alpine.js</li></ul>
+            </div>
+          </article>
+          <article class="project reveal" data-category="Institucionais" style="--d:0.00s">
+            <div class="browser">
+              <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+              <img src="assets/portfolio/cgd.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Página inicial do projecto CGD LDA, desenvolvido por Wilson Vicente">
+            </div>
+            <div>
+              <p class="project-meta"><span class="project-cat">Site institucional</span></p>
+              <h3>CGD LDA</h3>
+              <p>Site institucional para uma empresa de gráfica e design: serviços de impressão e branding, portfólio de trabalhos e pedido de orçamento.</p>
+              <ul class="project-stack" aria-label="Tecnologias usadas"><li class="tag">HTML</li><li class="tag">CSS</li><li class="tag">JavaScript</li></ul>
+            </div>
+          </article>
+          <article class="project reveal" data-category="Institucionais" style="--d:0.08s">
+            <div class="browser">
+              <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+              <img src="assets/portfolio/converta.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Página inicial do projecto Converta, desenvolvido por Wilson Vicente">
+            </div>
+            <div>
+              <p class="project-meta"><span class="project-cat">Site institucional</span></p>
+              <h3>Converta</h3>
+              <p>Site institucional para uma consultoria em Recursos Humanos e Advocacia, com páginas de serviços, apresentação da empresa e contactos.</p>
+              <ul class="project-stack" aria-label="Tecnologias usadas"><li class="tag">HTML</li><li class="tag">CSS</li><li class="tag">JavaScript</li></ul>
+            </div>
+          </article>
+          <article class="project reveal" data-category="Institucionais" style="--d:0.00s">
+            <div class="browser">
+              <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+              <img src="assets/portfolio/vitala.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Página inicial do projecto Vitala Clínica Geral, desenvolvido por Wilson Vicente">
+            </div>
+            <div>
+              <p class="project-meta"><span class="project-cat">Site institucional</span></p>
+              <h3>Vitala Clínica Geral</h3>
+              <p>Site para uma clínica médica em Luanda, com serviços, consultas e exames, e pedido de marcação de consultas online.</p>
+              <ul class="project-stack" aria-label="Tecnologias usadas"><li class="tag">HTML</li><li class="tag">CSS</li><li class="tag">JavaScript</li></ul>
+            </div>
+          </article>
+          <aside class="project-cta reveal" data-category="Todos">
+            <div>
+              <h3>O próximo projecto pode ser o seu.</h3>
+              <p>Conte-me o que precisa e receba uma proposta clara, com prazos e valores definidos.</p>
+            </div>
+            <a href="#contacto" class="btn btn-light">Pedir orçamento <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Processo -->
+    <section class="section" id="processo" aria-labelledby="processo-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Processo</p>
+          <h2 class="h2" id="processo-title">Como trabalhamos juntos</h2>
+          <p class="lead">Um processo simples e transparente, para que saiba sempre em que fase está o seu projecto e o que vem a seguir.</p>
+        </header>
+        <ol class="steps">
+          <li class="step reveal"><span class="step-num">01</span><svg class="icon icon-lg" aria-hidden="true"><use href="#i-messages-square"></use></svg><h3>Conversa inicial</h3><p>Percebo o seu negócio, os objectivos e o público que quer alcançar. Sem custos e sem compromisso.</p></li>
+          <li class="step reveal" style="--d:.08s"><span class="step-num">02</span><svg class="icon icon-lg" aria-hidden="true"><use href="#i-file-text"></use></svg><h3>Proposta e cronograma</h3><p>Recebe um orçamento claro, com prazos e etapas definidos antes de começarmos.</p></li>
+          <li class="step reveal" style="--d:.16s"><span class="step-num">03</span><svg class="icon icon-lg" aria-hidden="true"><use href="#i-pen-tool"></use></svg><h3>Design e desenvolvimento</h3><p>Desenho e programo o projecto, com o seu acompanhamento e aprovação em cada fase.</p></li>
+          <li class="step reveal" style="--d:.24s"><span class="step-num">04</span><svg class="icon icon-lg" aria-hidden="true"><use href="#i-rocket"></use></svg><h3>Lançamento e suporte</h3><p>Publico o site, dou formação para gerir o conteúdo e continuo disponível depois da entrega.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Tecnologias -->
+    <section class="section section--tint" id="tecnologias" aria-labelledby="tecnologias-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Tecnologias</p>
+          <h2 class="h2" id="tecnologias-title">Ferramentas sólidas, resultados duradouros</h2>
+          <p class="lead">Trabalho com tecnologias maduras e amplamente usadas, para que o seu projecto seja estável, seguro e fácil de manter no futuro.</p>
+        </header>
+        <ul class="tech-grid reveal">
+          <li class="tech" style="--brand:#777BB4"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.01 10.207h-.944l-.515 2.648h.838c.556 0 .97-.105 1.242-.314.272-.21.455-.559.55-1.049.092-.47.05-.802-.124-.995-.175-.193-.523-.29-1.047-.29zM12 5.688C5.373 5.688 0 8.514 0 12s5.373 6.313 12 6.313S24 15.486 24 12c0-3.486-5.373-6.312-12-6.312zm-3.26 7.451c-.261.25-.575.438-.917.551-.336.108-.765.164-1.285.164H5.357l-.327 1.681H3.652l1.23-6.326h2.65c.797 0 1.378.209 1.744.628.366.418.476 1.002.33 1.752a2.836 2.836 0 0 1-.305.847c-.143.255-.33.49-.561.703zm4.024.715l.543-2.799c.063-.318.039-.536-.068-.651-.107-.116-.336-.174-.687-.174H11.46l-.704 3.625H9.388l1.23-6.327h1.367l-.327 1.682h1.218c.767 0 1.295.134 1.586.401s.378.7.263 1.299l-.572 2.944h-1.389zm7.597-2.265a2.782 2.782 0 0 1-.305.847c-.143.255-.33.49-.561.703a2.44 2.44 0 0 1-.917.551c-.336.108-.765.164-1.286.164h-1.18l-.327 1.682h-1.378l1.23-6.326h2.649c.797 0 1.378.209 1.744.628.366.417.477 1.001.331 1.751zM17.766 10.207h-.943l-.516 2.648h.838c.557 0 .971-.105 1.242-.314.272-.21.455-.559.551-1.049.092-.47.049-.802-.125-.995s-.524-.29-1.047-.29z"/></svg><span>PHP<small>Back-end</small></span></li>
+          <li class="tech" style="--brand:#FF2D20"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.642 5.43a.364.364 0 01.014.1v5.149c0 .135-.073.26-.189.326l-4.323 2.49v4.934a.378.378 0 01-.188.326L9.93 23.949a.316.316 0 01-.066.027c-.008.002-.016.008-.024.01a.348.348 0 01-.192 0c-.011-.002-.02-.008-.03-.012-.02-.008-.042-.014-.062-.025L.533 18.755a.376.376 0 01-.189-.326V2.974c0-.033.005-.066.014-.098.003-.012.01-.02.014-.032a.369.369 0 01.023-.058c.004-.013.015-.022.023-.033l.033-.045c.012-.01.025-.018.037-.027.014-.012.027-.024.041-.034H.53L5.043.05a.375.375 0 01.375 0L9.93 2.647h.002c.015.01.027.021.04.033l.038.027c.013.014.02.03.033.045.008.011.02.021.025.033.01.02.017.038.024.058.003.011.01.021.013.032.01.031.014.064.014.098v9.652l3.76-2.164V5.527c0-.033.004-.066.013-.098.003-.01.01-.02.013-.032a.487.487 0 01.024-.059c.007-.012.018-.02.025-.033.012-.015.021-.03.033-.043.012-.012.025-.02.037-.028.014-.01.026-.023.041-.032h.001l4.513-2.598a.375.375 0 01.375 0l4.513 2.598c.016.01.027.021.042.031.012.01.025.018.036.028.013.014.022.03.034.044.008.012.019.021.024.033.011.02.018.04.024.06.006.01.012.021.015.032zm-.74 5.032V6.179l-1.578.908-2.182 1.256v4.283zm-4.51 7.75v-4.287l-2.147 1.225-6.126 3.498v4.325zM1.093 3.624v14.588l8.273 4.761v-4.325l-4.322-2.445-.002-.003H5.04c-.014-.01-.025-.021-.04-.031-.011-.01-.024-.018-.035-.027l-.001-.002c-.013-.012-.021-.025-.031-.04-.01-.011-.021-.022-.028-.036h-.002c-.008-.014-.013-.031-.02-.047-.006-.016-.014-.027-.018-.043a.49.49 0 01-.008-.057c-.002-.014-.006-.027-.006-.041V5.789l-2.18-1.257zM5.23.81L1.47 2.974l3.76 2.164 3.758-2.164zm1.956 13.505l2.182-1.256V3.624l-1.58.91-2.182 1.255v9.435zm11.581-10.95l-3.76 2.163 3.76 2.163 3.759-2.164zm-.376 4.978L16.21 7.087 14.63 6.18v4.283l2.182 1.256 1.58.908zm-8.65 9.654l5.514-3.148 2.756-1.572-3.757-2.163-4.323 2.489-3.941 2.27z"/></svg><span>Laravel<small>Framework PHP</small></span></li>
+          <li class="tech" style="--brand:#4479A1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.405 5.501c-.115 0-.193.014-.274.033v.013h.014c.054.104.146.18.214.273.054.107.1.214.154.32l.014-.015c.094-.066.14-.172.14-.333-.04-.047-.046-.094-.08-.14-.04-.067-.126-.1-.18-.153zM5.77 18.695h-.927a50.854 50.854 0 00-.27-4.41h-.008l-1.41 4.41H2.45l-1.4-4.41h-.01a72.892 72.892 0 00-.195 4.41H0c.055-1.966.192-3.81.41-5.53h1.15l1.335 4.064h.008l1.347-4.064h1.095c.242 2.015.384 3.86.428 5.53zm4.017-4.08c-.378 2.045-.876 3.533-1.492 4.46-.482.716-1.01 1.073-1.583 1.073-.153 0-.34-.046-.566-.138v-.494c.11.017.24.026.386.026.268 0 .483-.075.647-.222.197-.18.295-.382.295-.605 0-.155-.077-.47-.23-.944L6.23 14.615h.91l.727 2.36c.164.536.233.91.205 1.123.4-1.064.678-2.227.835-3.483zm12.325 4.08h-2.63v-5.53h.885v4.85h1.745zm-3.32.135l-1.016-.5c.09-.076.177-.158.255-.25.433-.506.648-1.258.648-2.253 0-1.83-.718-2.746-2.155-2.746-.704 0-1.254.232-1.65.697-.43.508-.646 1.256-.646 2.245 0 .972.19 1.686.574 2.14.35.41.877.615 1.583.615.264 0 .506-.033.725-.098l1.325.772.36-.622zM15.5 17.588c-.225-.36-.337-.94-.337-1.736 0-1.393.424-2.09 1.27-2.09.443 0 .77.167.977.5.224.362.336.936.336 1.723 0 1.404-.424 2.108-1.27 2.108-.445 0-.77-.167-.978-.5zm-1.658-.425c0 .47-.172.856-.516 1.156-.344.3-.803.45-1.384.45-.543 0-1.064-.172-1.573-.515l.237-.476c.438.22.833.328 1.19.328.332 0 .593-.073.783-.22a.754.754 0 00.3-.615c0-.33-.23-.61-.648-.845-.388-.213-1.163-.657-1.163-.657-.422-.307-.632-.636-.632-1.177 0-.45.157-.81.47-1.085.315-.278.72-.415 1.22-.415.512 0 .98.136 1.4.41l-.213.476a2.726 2.726 0 00-1.064-.23c-.283 0-.502.068-.654.206a.685.685 0 00-.248.524c0 .328.234.61.666.85.393.215 1.187.67 1.187.67.433.305.648.63.648 1.168zm9.382-5.852c-.535-.014-.95.04-1.297.188-.1.04-.26.04-.274.167.055.053.063.14.11.214.08.134.218.313.346.407.14.11.28.216.427.31.26.16.555.255.81.416.145.094.293.213.44.313.073.05.12.14.214.172v-.02c-.046-.06-.06-.147-.105-.214-.067-.067-.134-.127-.2-.193a3.223 3.223 0 00-.695-.675c-.214-.146-.682-.35-.77-.595l-.013-.014c.146-.013.32-.066.46-.106.227-.06.435-.047.67-.106.106-.027.213-.06.32-.094v-.06c-.12-.12-.21-.283-.334-.395a8.867 8.867 0 00-1.104-.823c-.21-.134-.476-.22-.697-.334-.08-.04-.214-.06-.26-.127-.12-.146-.19-.34-.275-.514a17.69 17.69 0 01-.547-1.163c-.12-.262-.193-.523-.34-.763-.69-1.137-1.437-1.826-2.586-2.5-.247-.14-.543-.2-.856-.274-.167-.008-.334-.02-.5-.027-.11-.047-.216-.174-.31-.235-.38-.24-1.364-.76-1.644-.072-.18.434.267.862.422 1.082.115.153.26.328.34.5.047.116.06.235.107.356.106.294.207.622.347.897.073.14.153.287.247.413.054.073.146.107.167.227-.094.136-.1.334-.154.5-.24.757-.146 1.693.194 2.25.107.166.362.534.703.393.3-.12.234-.5.32-.835.02-.08.007-.133.048-.187v.015c.094.188.188.367.274.555.206.328.566.668.867.895.16.12.287.328.487.402v-.02h-.015c-.043-.058-.1-.086-.154-.133a3.445 3.445 0 01-.35-.4 8.76 8.76 0 01-.747-1.218c-.11-.21-.202-.436-.29-.643-.04-.08-.04-.2-.107-.24-.1.146-.247.273-.32.453-.127.288-.14.642-.188 1.01-.027.007-.014 0-.027.014-.214-.052-.287-.274-.367-.46-.2-.475-.233-1.238-.06-1.785.047-.14.247-.582.167-.716-.042-.127-.174-.2-.247-.303a2.478 2.478 0 01-.24-.427c-.16-.374-.24-.788-.414-1.162-.08-.173-.22-.354-.334-.513-.127-.18-.267-.307-.368-.52-.033-.073-.08-.194-.027-.274.014-.054.042-.075.094-.09.088-.072.335.022.422.062.247.1.455.194.662.334.094.066.195.193.315.226h.14c.214.047.455.014.655.073.355.114.675.28.962.46a5.953 5.953 0 012.085 2.286c.08.154.115.295.188.455.14.33.313.663.455.982.14.315.275.636.476.897.1.14.502.213.682.286.133.06.34.115.46.188.23.14.454.3.67.454.11.076.443.243.463.378z"/></svg><span>MySQL<small>Base de dados</small></span></li>
+          <li class="tech" style="--brand:#C9A400"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg><span>JavaScript<small>Interactividade</small></span></li>
+          <li class="tech" style="--brand:#1572B6"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"/></svg><span>CSS<small>Estilos e layout</small></span></li>
+          <li class="tech" style="--brand:#06B6D4"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"/></svg><span>Tailwind CSS<small>Interfaces modernas</small></span></li>
+          <li class="tech" style="--brand:#7952B3"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.77 11.24H9.956V8.202h2.152c1.17 0 1.834.522 1.834 1.466 0 1.008-.773 1.572-2.174 1.572zm.324 1.206H9.957v3.348h2.231c1.459 0 2.232-.585 2.232-1.685s-.795-1.663-2.326-1.663zM24 11.39v1.218c-1.128.108-1.817.944-2.226 2.268-.407 1.319-.463 2.937-.42 4.186.045 1.3-.968 2.5-2.337 2.5H4.985c-1.37 0-2.383-1.2-2.337-2.5.043-1.249-.013-2.867-.42-4.186-.41-1.324-1.1-2.16-2.228-2.268V11.39c1.128-.108 1.819-.944 2.227-2.268.408-1.319.464-2.937.42-4.186-.045-1.3.968-2.5 2.338-2.5h14.032c1.37 0 2.382 1.2 2.337 2.5-.043 1.249.013 2.867.42 4.186.409 1.324 1.098 2.16 2.226 2.268zm-7.927 2.817c0-1.354-.953-2.333-2.368-2.488v-.057c1.04-.169 1.856-1.135 1.856-2.213 0-1.537-1.213-2.538-3.062-2.538h-4.16v10.172h4.181c2.218 0 3.553-1.086 3.553-2.876z"/></svg><span>Bootstrap<small>Layouts responsivos</small></span></li>
+          <li class="tech" style="--brand:#538DD7"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.3934 4.5c.6837-.4317 1.1379-1.194 1.1379-2.0625C5.5313 1.0913 4.4398 0 3.0938 0 1.7475 0 .6563 1.0913.6563 2.4375c0 .7805.3668 1.4753.9375 1.9214V24h3v-3h17.5126c.6834 0 1.2373-.554 1.2373-1.2373a1.237 1.237 0 0 0-.1066-.5027l-2.8934-6.51 2.8934-6.51a1.237 1.237 0 0 0 .1066-.5026c0-.6834-.5539-1.2374-1.2373-1.2374Z"/></svg><span>Font Awesome<small>Ícones</small></span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Preços -->
+    <section class="section" id="precos" aria-labelledby="precos-title">
+      <div class="container">
+        <header class="section-head section-head--center reveal">
+          <p class="eyebrow">Planos &amp; preços</p>
+          <h2 class="h2" id="precos-title">Investimento transparente para o seu projecto</h2>
+          <p class="lead">Escolha o ponto de partida ideal para o seu negócio. Todos os projectos incluem design profissional e suporte dedicado.</p>
+        </header>
+        <div class="plans">
+          <article class="plan reveal" style="--d:0.00s">
+            <div class="plan-head"><h3>Site Institucional</h3></div>
+            <p class="plan-desc">Ideal para empresas que querem marcar presença online com profissionalismo.</p>
+            <p class="plan-price"><small>A partir de</small>150.000 Kz</p>
+            <ul class="plan-features">
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg><span>Até 5 páginas personalizadas</span></li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg><span>Design responsivo e moderno</span></li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg><span>Optimização SEO básica</span></li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg><span>Formulário de contacto</span></li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg><span>Integração com redes sociais</span></li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg><span>Certificado SSL incluído</span></li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg><span>Entrega em até 15 dias</span></li>
+            </ul>
+            <a href="#contacto" class="btn btn-outline btn-block">Pedir orçamento <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+          </article>
+          <article class="plan plan--featured reveal" style="--d:0.08s">
+            <div class="plan-head"><h3>Loja Virtual</h3><span class="plan-badge">Mais popular</span></div>
+            <p class="plan-desc">Para negócios que querem vender online com uma plataforma completa e segura.</p>
+            <p class="plan-price"><small>A partir de</small>350.000 Kz</p>
+            <ul class="plan-features">
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg><span>Catálogo de produtos ilimitado</span></li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg><span>Sistema de pagamentos integrado</span></li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg><span>Gestão de encomendas e stock</span></li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg><span>Design profissional e personalizado</span></li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg><span>SEO avançado para e-commerce</span></li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg><span>Painel de administração intuitivo</span></li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg><span>Integração com métodos de pagamento locais</span></li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg><span>Suporte técnico por 30 dias</span></li>
+            </ul>
+            <a href="#contacto" class="btn btn-light btn-block">Pedir orçamento <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+          </article>
+          <article class="plan reveal" style="--d:0.16s">
+            <div class="plan-head"><h3>Sistema Web</h3></div>
+            <p class="plan-desc">Soluções à medida para automatizar processos e fazer o seu negócio crescer.</p>
+            <p class="plan-price"><small>Orçamento</small>Sob consulta</p>
+            <ul class="plan-features">
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg><span>Desenvolvimento 100% personalizado</span></li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg><span>Painel de gestão completo</span></li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg><span>Integração com APIs externas</span></li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg><span>Base de dados optimizada</span></li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg><span>Sistema de autenticação seguro</span></li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg><span>Relatórios e dashboards</span></li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg><span>Escalável e performante</span></li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg><span>Suporte e manutenção contínua</span></li>
+            </ul>
+            <a href="#contacto" class="btn btn-outline btn-block">Pedir orçamento <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+          </article>
+        </div>
+        <p class="plans-note">Valores em Kwanzas (Kz). Pagamento por fases: uma entrada no início e o restante na entrega.</p>
+      </div>
+    </section>
+
+    <!-- Sobre -->
+    <section class="section section--white" id="sobre" aria-labelledby="sobre-title">
+      <div class="container">
+        <div class="about-grid">
+          <aside class="profile reveal" aria-label="Resumo profissional">
+            <div class="profile-top">
+              <span class="profile-avatar" aria-hidden="true">WV</span>
+              <div><strong>Wilson Vicente</strong><span>Web Designer &amp; Desenvolvedor Full-Stack</span></div>
+            </div>
+            <dl class="facts">
+              <div><dt>Localização</dt><dd>Luanda, Angola</dd></div>
+              <div><dt>Experiência</dt><dd>Mais de 8 anos</dd></div>
+              <div><dt>Especialidade</dt><dd>Sites, lojas virtuais e sistemas web</dd></div>
+              <div><dt>Tecnologias</dt><dd>PHP, Laravel, MySQL, JavaScript</dd></div>
+              <div><dt>Contacto</dt><dd><a class="text-link" href="mailto:wilson.vicente@wilsonvicente.com">wilson.vicente@wilsonvicente.com</a></dd></div>
+            </dl>
+          </aside>
+          <div>
+            <header class="section-head reveal" style="grid-template-columns:1fr;margin-bottom:2rem">
+              <p class="eyebrow">Sobre mim</p>
+              <h2 class="h2" id="sobre-title">Design elegante, código sólido e foco em resultados</h2>
+            </header>
+            <div class="about-text reveal">
+              <p>Com mais de 8 anos de experiência no desenvolvimento web, especializei-me em criar soluções digitais completas que combinam design elegante com tecnologia de ponta.</p>
+              <p>Cada projecto é desenvolvido com foco na experiência do utilizador, na performance e em resultados mensuráveis. Desde sites institucionais a sistemas complexos e lojas virtuais, trabalho com as melhores tecnologias do mercado e técnicas avançadas de SEO para garantir que o seu projecto se destaque online.</p>
+            </div>
+            <ul class="reasons">
+              <li class="reason reveal"><svg class="icon" aria-hidden="true"><use href="#i-palette"></use></svg><h3>Design profissional</h3><p>Interfaces modernas e personalizadas que reflectem a identidade única da sua marca.</p></li>
+              <li class="reason reveal"><svg class="icon" aria-hidden="true"><use href="#i-zap"></use></svg><h3>Performance optimizada</h3><p>Sites rápidos e responsivos, com a melhor experiência em qualquer dispositivo.</p></li>
+              <li class="reason reveal"><svg class="icon" aria-hidden="true"><use href="#i-trending-up"></use></svg><h3>SEO avançado</h3><p>Estratégias de optimização para melhorar o posicionamento nos motores de busca.</p></li>
+              <li class="reason reveal"><svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg><h3>Segurança e escalabilidade</h3><p>Código seguro e arquitectura preparada para crescer com o seu negócio.</p></li>
+              <li class="reason reveal"><svg class="icon" aria-hidden="true"><use href="#i-code"></use></svg><h3>Back-end robusto</h3><p>Desenvolvimento sólido, com as melhores práticas e tecnologias modernas.</p></li>
+              <li class="reason reveal"><svg class="icon" aria-hidden="true"><use href="#i-headphones"></use></svg><h3>Suporte dedicado</h3><p>Acompanhamento contínuo e suporte técnico para garantir o sucesso do projecto.</p></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEO e performance -->
+    <section class="section section--dark" id="seo" aria-labelledby="seo-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Incluído em todos os projectos</p>
+          <h2 class="h2" id="seo-title">Preparado para ser encontrado no Google</h2>
+          <p class="lead">Todos os projectos são desenvolvidos com as melhores práticas de SEO e performance, garantindo visibilidade e resultados desde o primeiro dia.</p>
+        </header>
+        <div class="seo-grid reveal">
+          <div class="seo-item"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-search"></use></svg><p class="seo-stat">1ª Página</p><p class="seo-label">Posicionamento</p><h3>Optimização SEO</h3><p class="seo-desc">Estrutura técnica e conteúdo optimizados para os motores de busca.</p></div>
+          <div class="seo-item"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-gauge"></use></svg><p class="seo-stat">90+</p><p class="seo-label">Score de performance</p><h3>Alta performance</h3><p class="seo-desc">Sites rápidos, com carregamento optimizado para uma melhor experiência.</p></div>
+          <div class="seo-item"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-smartphone"></use></svg><p class="seo-stat">100%</p><p class="seo-label">Mobile-first</p><h3>100% responsivo</h3><p class="seo-desc">Design adaptável que funciona perfeitamente em todos os dispositivos.</p></div>
+          <div class="seo-item"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-code-2"></use></svg><p class="seo-stat">A+</p><p class="seo-label">Acessibilidade</p><h3>Código semântico</h3><p class="seo-desc">HTML semântico e estruturado para uma melhor indexação.</p></div>
+        </div>
+        <p class="seo-tools reveal">Acompanhamento com relatórios de tráfego, posicionamento e conversões:
+          <span><svg class="icon icon-sm" aria-hidden="true"><use href="#i-bar-chart-3"></use></svg>Google Analytics</span>
+          <span><svg class="icon icon-sm" aria-hidden="true"><use href="#i-search"></use></svg>Search Console</span>
+          <span><svg class="icon icon-sm" aria-hidden="true"><use href="#i-gauge"></use></svg>PageSpeed</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container faq-grid">
+        <div class="faq-aside reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2 class="h2" id="faq-title" style="margin-top:1.25rem">Perguntas frequentes</h2>
+          <p>Respostas às dúvidas mais comuns sobre prazos, pagamentos e suporte. Não encontrou o que procura?</p>
+          <a class="text-link" href="#contacto">Fale comigo directamente <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+        </div>
+        <div class="faq-list reveal">
+          <details class="faq-item" name="faq">
+            <summary>Quanto tempo demora a criação de um site?<svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg></summary>
+            <p>O prazo varia conforme a complexidade do projecto. Um site institucional pode ficar pronto em 10 a 15 dias úteis. Lojas virtuais e sistemas web personalizados podem levar de 3 a 6 semanas. Após a análise do seu projecto, apresento um cronograma detalhado.</p>
+          </details>
+          <details class="faq-item" name="faq">
+            <summary>Qual é a forma de pagamento?<svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg></summary>
+            <p>Trabalho com pagamento dividido em fases: uma entrada no início do projecto e o restante na entrega final. Aceito transferência bancária e outros métodos de pagamento disponíveis em Angola. Os valores são apresentados em Kwanzas (Kz).</p>
+          </details>
+          <details class="faq-item" name="faq">
+            <summary>O site vai funcionar bem no telemóvel?<svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg></summary>
+            <p>Sim. Todos os sites que desenvolvo são 100% responsivos, ou seja, adaptam-se perfeitamente a qualquer dispositivo — telemóvel, tablet ou computador. A experiência do utilizador é prioridade em todos os projectos.</p>
+          </details>
+          <details class="faq-item" name="faq">
+            <summary>O que é SEO e por que é importante?<svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg></summary>
+            <p>SEO (Search Engine Optimization) é o conjunto de técnicas que fazem o seu site aparecer nas primeiras posições do Google. Isto significa mais visibilidade, mais visitas e mais clientes a encontrar o seu negócio online. Todos os meus projectos incluem optimização SEO.</p>
+          </details>
+          <details class="faq-item" name="faq">
+            <summary>Oferece suporte após a entrega do site?<svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg></summary>
+            <p>Sim. Todos os planos incluem um período de suporte técnico gratuito após a entrega. Além disso, ofereço planos de manutenção contínua para garantir que o seu site esteja sempre actualizado, seguro e a funcionar na perfeição.</p>
+          </details>
+          <details class="faq-item" name="faq">
+            <summary>Posso actualizar o conteúdo do site sozinho?<svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg></summary>
+            <p>Claro. Os sites são desenvolvidos com painéis de gestão intuitivos que lhe permitem alterar textos, imagens e conteúdos de forma simples, sem necessidade de conhecimentos técnicos. Também forneço formação inicial para que se sinta à vontade.</p>
+          </details>
+          <details class="faq-item" name="faq">
+            <summary>Desenvolve lojas virtuais com sistema de pagamento?<svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg></summary>
+            <p>Sim. As lojas virtuais que desenvolvo incluem integração com os principais sistemas de pagamento disponíveis em Angola, gestão de stock, encomendas e toda a estrutura necessária para vender online com segurança.</p>
+          </details>
+          <details class="faq-item" name="faq">
+            <summary>É possível ter um sistema web personalizado para a minha empresa?<svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg></summary>
+            <p>Com certeza. Desenvolvo sistemas web à medida das necessidades do seu negócio — desde gestão de clientes, controlo de stock, agendamentos, relatórios e muito mais. Cada sistema é pensado para optimizar os processos da sua empresa.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chamada final -->
+    <section class="section" style="padding-top:0" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div class="cta-grid">
+          <div>
+          <h2 id="cta-title">Tem um projecto em mente? Vamos tirá-lo do papel.</h2>
+          <p>Transforme a sua visão em realidade digital. Entre em contacto e descubra como posso ajudar o seu negócio a crescer online em Angola.</p>
+          <div class="hero-actions">
+            <a href="#contacto" class="btn btn-light">Pedir orçamento <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+            <a href="https://wa.me/244931601440?text=Ol%C3%A1%20Wilson%2C%20vi%20o%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20pedir%20um%20or%C3%A7amento." class="btn btn-outline" target="_blank" rel="noopener"><svg class="icon icon-fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>WhatsApp</a>
+          </div>
+          </div>
+          <ul class="cta-list">
+            <li class="cta-list-title">O que recebe</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Orçamento personalizado, sem compromisso</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Cronograma detalhado antes de começar</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Site rápido, responsivo e optimizado para o Google</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Formação e suporte técnico após a entrega</li>
+          </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="section section--tint" id="contacto" aria-labelledby="contacto-title">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <header class="section-head" style="grid-template-columns:1fr;margin-bottom:0">
+            <p class="eyebrow">Contacto</p>
+            <h2 class="h2" id="contacto-title">Vamos trabalhar juntos</h2>
+            <p class="lead">Pronto para dar início ao seu projecto? Envie uma mensagem e receba um orçamento personalizado, sem compromisso.</p>
+          </header>
+          <div class="channels">
+            <a class="channel" href="https://wa.me/244931601440?text=Ol%C3%A1%20Wilson%2C%20vi%20o%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20pedir%20um%20or%C3%A7amento." target="_blank" rel="noopener">
+              <span class="channel-icon channel-icon--wa"><svg class="icon icon-fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></span>
+              <span><small>WhatsApp · Telefone</small><strong>+244 931 601 440</strong></span>
+              <svg class="icon icon-sm icon-go" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg>
+            </a>
+            <a class="channel" href="mailto:wilson.vicente@wilsonvicente.com">
+              <span class="channel-icon"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg></span>
+              <span><small>Email</small><strong>wilson.vicente@wilsonvicente.com</strong></span>
+              <svg class="icon icon-sm icon-go" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg>
+            </a>
+            <div class="channel">
+              <span class="channel-icon"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg></span>
+              <span><small>Localização</small><strong>Luanda, Angola</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <form class="form reveal" id="contact-form">
+          <h3>Peça o seu orçamento</h3>
+          <p>Preencha o formulário — respondo com uma proposta à medida.</p>
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Nome completo</label>
+              <input class="control" type="text" id="name" name="name" required placeholder="O seu nome" autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input class="control" type="email" id="email" name="email" required placeholder="nome@empresa.com" autocomplete="email">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="phone">Telefone <span>(opcional)</span></label>
+              <input class="control" type="tel" id="phone" name="phone" placeholder="+244 9XX XXX XXX" autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="service">Tipo de projecto</label>
+              <select class="control" id="service" name="service" required>
+                <option value="">Selecione...</option>
+                <option value="Site Institucional">Site Institucional</option>
+                <option value="Loja Virtual">Loja Virtual</option>
+                <option value="Sistema Web">Sistema Web</option>
+                <option value="Portal de Notícias">Portal de Notícias</option>
+                <option value="Blog">Blog</option>
+                <option value="Plataforma de Reservas">Plataforma de Reservas</option>
+                <option value="Outro">Outro</option>
+              </select>
+            </div>
+          </div>
+          <div class="field field--full">
+            <label for="message">Mensagem</label>
+            <textarea class="control" id="message" name="message" required rows="5" placeholder="Fale-me do seu negócio e do que precisa..."></textarea>
+          </div>
+          <button class="btn btn-primary btn-block" id="contact-submit" type="submit">
+            <span class="submit-state" id="submit-idle">Enviar mensagem <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-send"></use></svg></span>
+            <span class="submit-state" id="submit-busy" hidden><span class="spinner" aria-hidden="true"></span>A enviar...</span>
+          </button>
+          <p class="form-foot">Os seus dados são usados apenas para responder ao seu pedido.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="#" class="brand" aria-label="Wilson Vicente — voltar ao topo">
+            <span class="brand-mark" aria-hidden="true">WV</span>
+            <span class="brand-name">Wilson Vicente<span class="brand-dot">.</span></span>
+          </a>
+          <p>Web Designer &amp; Desenvolvedor Full-Stack em Luanda. Sites, lojas virtuais e sistemas web para empresas em Angola.</p>
+        </div>
+        <div>
+          <h2>Navegação</h2>
+          <ul>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#precos">Preços</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Serviços</h2>
+          <ul>
+            <li><a href="#servicos">Sites institucionais</a></li>
+            <li><a href="#servicos">Lojas virtuais</a></li>
+            <li><a href="#servicos">Sistemas web</a></li>
+            <li><a href="#servicos">Plataformas de reservas</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Contacto</h2>
+          <ul>
+            <li><a href="mailto:wilson.vicente@wilsonvicente.com">wilson.vicente@wilsonvicente.com</a></li>
+            <li><a href="https://wa.me/244931601440?text=Ol%C3%A1%20Wilson%2C%20vi%20o%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20pedir%20um%20or%C3%A7amento." target="_blank" rel="noopener">+244 931 601 440</a></li>
+            <li>Luanda, Angola</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> Wilson Vicente. Todos os direitos reservados.</p>
+        <p>Feito à mão em Luanda, Angola.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/244931601440?text=Ol%C3%A1%20Wilson%2C%20vi%20o%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20pedir%20um%20or%C3%A7amento." target="_blank" rel="noopener" aria-label="Falar com Wilson Vicente no WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+
+  <script src="js/config.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
 </html>

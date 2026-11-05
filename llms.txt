@@ -1,0 +1,40 @@
+# Wilson Vicente — Web Designer e Desenvolvedor Full-Stack em Luanda, Angola
+
+> Wilson Vicente é web designer e programador full-stack baseado em Luanda, Angola, com mais de 8 anos de experiência. Cria sites institucionais, lojas virtuais (e-commerce), sistemas web à medida e plataformas de reservas para empresas e profissionais em Angola, com foco em design profissional, performance e SEO.
+
+## Serviços
+
+- Sites institucionais: websites profissionais que transmitem credibilidade e reforçam a presença digital da empresa. A partir de 150.000 Kz; até 5 páginas, design responsivo, SEO básico, formulário de contacto, certificado SSL, entrega em até 15 dias.
+- Lojas virtuais: e-commerce completo, com pagamentos integrados (incluindo métodos de pagamento locais), gestão de encomendas e stock e painel de administração. A partir de 350.000 Kz.
+- Sistemas web à medida: painéis de gestão, autenticação segura, integração com APIs, relatórios e dashboards. Orçamento sob consulta.
+- Plataformas de reservas: agendamento online para serviços, hotéis, restaurantes e consultórios.
+- Sites de notícias e blogs profissionais.
+- Optimização SEO e performance incluídas em todos os projectos.
+
+## Projectos realizados
+
+- Recrutamento Mwangolé — plataforma de recrutamento com vagas, candidaturas e painel de gestão para empresas (Laravel, Livewire, MySQL, Tailwind CSS).
+- Residencial UTT — site e sistema de reservas para um residencial em Luanda, com pagamentos e relatórios financeiros (Laravel, Livewire, MySQL, Tailwind CSS, Alpine.js).
+- CGD LDA — site institucional para empresa de gráfica e design (HTML, CSS, JavaScript).
+- Converta — site institucional para consultoria em Recursos Humanos e Advocacia (HTML, CSS, JavaScript).
+- Vitala Clínica Geral — site para clínica médica em Luanda, com marcação de consultas (HTML, CSS, JavaScript).
+
+## Tecnologias
+
+PHP, Laravel, MySQL, JavaScript, CSS, Tailwind CSS, Bootstrap, Font Awesome.
+
+## Como trabalha
+
+1. Conversa inicial sem custos nem compromisso.
+2. Proposta com orçamento e cronograma definidos.
+3. Design e desenvolvimento com aprovação do cliente em cada fase.
+4. Lançamento, formação para gerir o conteúdo e suporte após a entrega.
+
+Pagamento por fases (entrada no início e restante na entrega), em Kwanzas (Kz), por transferência bancária ou outros métodos disponíveis em Angola.
+
+## Contacto
+
+- Site: https://wilsonvicente.com/
+- Email: wilson.vicente@wilsonvicente.com
+- Telefone e WhatsApp: +244 931 601 440
+- Localização: Luanda, Angola

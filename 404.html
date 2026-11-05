@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-AO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página não encontrada — Wilson Vicente</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=Instrument+Sans:wght@400..600&family=JetBrains+Mono:wght@500&display=swap">
+  <script>
+    // Mesmo tema da página principal: escuro por padrão, claro se o visitante o escolheu
+    try { if (localStorage.getItem('theme') === 'light') document.documentElement.dataset.theme = 'light'; } catch (e) {}
+  </script>
+  <style>
+    :root { color-scheme: dark; --bg: #0f1012; --text: #c6c8ce; --title: #f2f0eb; --code: #ff8f6b; --line: #3b3e46; --surface: #191b1f; }
+    [data-theme="light"] { color-scheme: light; --bg: #f6f4ef; --text: #3a3f4a; --title: #111318; --code: #b8401a; --line: #cfcabd; --surface: #ffffff; }
+    * { box-sizing: border-box; }
+    body {
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 2rem 1.25rem;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Instrument Sans', 'Segoe UI', system-ui, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    main { max-width: 32rem; }
+    .code { color: var(--code); font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.8125rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    h1 { margin: 1rem 0; color: var(--title); font-family: 'Bricolage Grotesque', 'Segoe UI', sans-serif; font-size: clamp(2.25rem, 1.6rem + 3vw, 3.5rem); line-height: 1; letter-spacing: -0.04em; }
+    p { margin: 0 0 2rem; font-size: 1.125rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    a { display: inline-flex; align-items: center; min-height: 3rem; padding: 0.75rem 1.375rem; border-radius: 10px; font-weight: 600; text-decoration: none; }
+    .primary { background: #1f4fd8; color: #fff; }
+    .primary:hover { background: #173fb0; }
+    .ghost { border: 1px solid var(--line); background: var(--surface); color: var(--title); }
+    .ghost:hover { border-color: var(--title); }
+    a:focus-visible { outline: 2px solid #1f4fd8; outline-offset: 3px; }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="code">Erro 404</p>
+    <h1>Esta página não existe.</h1>
+    <p>O endereço pode estar errado ou a página foi removida. Volte ao início para conhecer os serviços e projectos.</p>
+    <div class="actions">
+      <a class="primary" href="/">Voltar ao início</a>
+      <a class="ghost" href="/#contacto">Pedir orçamento</a>
+    </div>
+  </main>
+</body>
+</html>
