@@ -1,6 +1,6 @@
 # Wilson Vicente — Web Designer e Desenvolvedor Full-Stack em Luanda, Angola
 
-> Wilson Vicente é web designer e programador full-stack baseado em Luanda, Angola, com mais de 8 anos de experiência. Cria sites institucionais, lojas virtuais (e-commerce), sistemas web à medida e plataformas de reservas para empresas e profissionais em Angola, com foco em design profissional, performance e SEO.
+> Wilson Vicente é web designer e programador full-stack baseado em Luanda, Angola, com mais de 5 anos de experiência em desenvolvimento web (PHP, Laravel, JavaScript e MySQL). Cria sites institucionais, lojas virtuais (e-commerce), sistemas web à medida e plataformas de reservas para empresas e profissionais em Angola, com foco em design profissional, performance e SEO.
 
 ## Serviços
 
@@ -34,6 +34,8 @@ Pagamento por fases (entrada no início e restante na entrega), em Kwanzas (Kz),
 
 ## Contacto
 
+- Nome completo: Wilson Vicente Lucas Bumba
+- Currículo (PDF): https://wilsonvicente.com/assets/Curriculo_Wilson_Vicente_Desenvolvedor_Web.pdf
 - Site: https://wilsonvicente.com/
 - Email: wilson.vicente@wilsonvicente.com
 - Telefone e WhatsApp: +244 931 601 440

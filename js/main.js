@@ -111,6 +111,29 @@
     window.addEventListener('scroll', onScroll, { passive: true });
   }
 
+  /* Currículo: janela de visualização em ecrãs largos com leitor de PDF;
+     nos restantes casos a ligação abre o PDF num separador novo
+     ======================================================================== */
+  const cvDialog = $('#cv-dialog');
+  const cvFrame = $('#cv-frame');
+  const wideScreen = window.matchMedia('(min-width: 768px)');
+  const canShowPdfInline = () => wideScreen.matches
+    && navigator.pdfViewerEnabled !== false
+    && typeof cvDialog.showModal === 'function';
+
+  $$('[data-cv-view]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      if (!canShowPdfInline()) return;
+      event.preventDefault();
+      if (!cvFrame.getAttribute('src')) cvFrame.src = `${link.getAttribute('href')}#view=FitH`;
+      cvDialog.showModal();
+    });
+  });
+  $('#cv-dialog-close').addEventListener('click', () => cvDialog.close());
+  cvDialog.addEventListener('click', (event) => {
+    if (event.target === cvDialog) cvDialog.close();
+  });
+
   /* Filtro do portfólio
      ======================================================================== */
   const filters = $$('.filter');
@@ -209,6 +232,23 @@
     }
 
     const data = new FormData(form);
+    const name = data.get('name').trim();
+    const email = data.get('email').trim();
+    const phone = data.get('phone').trim() || '—';
+    const service = data.get('service');
+    const originalMessage = data.get('message').trim();
+
+    // O template do EmailJS pode não usar todas as variáveis: os dados do contacto
+    // seguem também dentro da mensagem, para chegarem sempre ao email.
+    const message = [
+      originalMessage,
+      '',
+      '— Dados do contacto —',
+      `Nome: ${name}`,
+      `Email: ${email}`,
+      `Telefone: ${phone}`,
+      `Tipo de projecto: ${service}`,
+    ].join('\n');
 
     try {
       const response = await fetch(EMAILJS_ENDPOINT, {
@@ -219,13 +259,21 @@
           template_id: templateId,
           user_id: publicKey,
           template_params: {
-            name: data.get('name'),
-            email: data.get('email'),
-            phone: data.get('phone') || '—',
-            service: data.get('service'),
-            message: data.get('message'),
+            name,
+            email,
+            phone,
+            service,
+            message,
+            original_message: originalMessage,
+            title: `Pedido de orçamento: ${service} — ${name}`,
+            time: new Date().toLocaleString('pt-PT', { timeZone: 'Africa/Luanda', dateStyle: 'long', timeStyle: 'short' }),
+            // Nomes alternativos usados com frequência em templates do EmailJS
+            from_name: name,
+            from_email: email,
+            user_name: name,
+            user_email: email,
             to_email: toEmail,
-            reply_to: data.get('email'),
+            reply_to: email,
           },
         }),
       });
