@@ -30,6 +30,16 @@ robots.txt, sitemap.xml, llms.txt
 
 Cada projecto do portfólio tem uma ligação "Visitar site" (`class="project-link"` no `index.html`). As que ainda têm `href="#"` ficam escondidas; basta trocar o `#` pelo endereço do site para a ligação aparecer.
 
+## Clientes e parceiros
+
+Os logótipos originais estão em `assets/parceiros/originais/`. O site usa as versões em `assets/parceiros/*.webp`: monocromáticas (preto com transparência), recortadas e sem slogans pequenos, para ficarem uniformes e mudarem de cor com o tema (no tema escuro são invertidas para branco).
+
+Para acrescentar um cliente: criar o `.webp` no mesmo formato e copiar um `<li class="logo">` nas duas listas da secção `#clientes` (a segunda é a cópia usada no movimento contínuo, com `alt=""`). O `--h` define a altura do logótipo: logótipos largos ficam mais baixos e logótipos estreitos mais altos, para terem o mesmo peso visual.
+
+## Depoimentos
+
+Os depoimentos da secção `#depoimentos` são **fictícios** (exemplos). Substitua-os por depoimentos reais, com autorização dos clientes, antes de divulgar o site. Não os acrescente aos dados estruturados (JSON-LD): o Google penaliza avaliações que não sejam verificáveis.
+
 ## Formulário de contacto (EmailJS)
 
 O formulário envia as mensagens pelo [EmailJS](https://www.emailjs.com/), configurado em `js/config.js`.

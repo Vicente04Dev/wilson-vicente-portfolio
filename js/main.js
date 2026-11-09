@@ -150,6 +150,46 @@
     });
   });
 
+  /* Clientes: faixa contínua de logótipos
+     Repete o conjunto de logótipos até cobrir o ecrã e avança exactamente
+     a largura de um conjunto, para o ciclo não ter saltos.
+     ======================================================================== */
+  const marquee = $('[data-marquee]');
+  const marqueeToggle = $('[data-marquee-toggle]');
+
+  if (marquee && !reducedMotion) {
+    const track = $('.marquee-track', marquee);
+    const template = $('.logo-set[aria-hidden="true"]', track);
+    const pixelsPerSecond = 40;
+
+    const fillMarquee = () => {
+      const setWidth = template.getBoundingClientRect().width;
+      if (!setWidth) return;
+      const needed = Math.ceil(marquee.clientWidth / setWidth) + 1;
+      let sets = $$('.logo-set', track);
+      while (sets.length < needed) {
+        track.append(template.cloneNode(true));
+        sets = $$('.logo-set', track);
+      }
+      track.style.setProperty('--marquee-shift', `-${setWidth}px`);
+      track.style.setProperty('--marquee-duration', `${(setWidth / pixelsPerSecond).toFixed(1)}s`);
+    };
+
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(fillMarquee, 150);
+    });
+    fillMarquee();
+
+    marqueeToggle.addEventListener('click', () => {
+      const paused = marqueeToggle.getAttribute('aria-pressed') !== 'true';
+      marqueeToggle.setAttribute('aria-pressed', String(paused));
+      $('span', marqueeToggle).textContent = paused ? 'Retomar animação' : 'Pausar animação';
+      marquee.classList.toggle('is-paused', paused);
+    });
+  }
+
   /* Perguntas frequentes: só uma aberta de cada vez
      (o atributo name dos <details> já o faz nos browsers recentes)
      ======================================================================== */

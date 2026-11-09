@@ -19,6 +19,10 @@
 - Converta — site institucional para consultoria em Recursos Humanos e Advocacia (HTML, CSS, JavaScript).
 - Vitala Clínica Geral — site para clínica médica em Luanda, com marcação de consultas (HTML, CSS, JavaScript).
 
+## Clientes e parceiros
+
+UTT Residencial, Recrutamento Mwangolé, Kilunji, Vertzontal e Groovman Grandes Eventos.
+
 ## Tecnologias
 
 PHP, Laravel, MySQL, JavaScript, CSS, Tailwind CSS, Bootstrap, Font Awesome.

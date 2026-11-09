@@ -428,6 +428,8 @@
     <symbol id="i-alert-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></symbol>
     <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></symbol>
     <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16" rx="1"></rect><rect x="14" y="4" width="4" height="16" rx="1"></rect></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"></polygon></symbol>
   </svg>
 
   <header class="header" id="header">
@@ -653,6 +655,43 @@
       </div>
     </section>
 
+    <!-- Clientes e parceiros -->
+    <section class="section partners" id="clientes" aria-labelledby="clientes-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Clientes &amp; parceiros</p>
+          <h2 class="h2" id="clientes-title">Empresas que confiaram no meu trabalho</h2>
+          <p class="lead">Algumas das marcas e empresas com quem já trabalhei, em projectos de sites e sistemas web feitos à medida de cada negócio.</p>
+        </header>
+      </div>
+      <div class="marquee reveal" data-marquee>
+        <div class="marquee-track">
+          <ul class="logo-set" aria-label="Clientes e parceiros">
+            <li class="logo" style="--h:2.4rem"><img src="assets/parceiros/recrutamento-mwangole.webp" width="621" height="160" loading="lazy" decoding="async" alt="Recrutamento Mwangolé"></li>
+            <li class="logo" style="--h:2.85rem"><img src="assets/parceiros/utt.webp" width="446" height="160" loading="lazy" decoding="async" alt="UTT Residencial"></li>
+            <li class="logo" style="--h:2.85rem"><img src="assets/parceiros/kilunji.webp" width="446" height="160" loading="lazy" decoding="async" alt="Kilunji"></li>
+            <li class="logo" style="--h:3.5rem"><img src="assets/parceiros/vertzontal.webp" width="293" height="160" loading="lazy" decoding="async" alt="Vertzontal"></li>
+            <li class="logo" style="--h:1.6rem"><img src="assets/parceiros/groovman.webp" width="1437" height="160" loading="lazy" decoding="async" alt="Groovman Grandes Eventos"></li>
+          </ul>
+          <!-- Cópias só para o movimento contínuo: escondidas dos leitores de ecrã -->
+          <ul class="logo-set" aria-hidden="true">
+            <li class="logo" style="--h:2.4rem"><img src="assets/parceiros/recrutamento-mwangole.webp" width="621" height="160" loading="lazy" decoding="async" alt=""></li>
+            <li class="logo" style="--h:2.85rem"><img src="assets/parceiros/utt.webp" width="446" height="160" loading="lazy" decoding="async" alt=""></li>
+            <li class="logo" style="--h:2.85rem"><img src="assets/parceiros/kilunji.webp" width="446" height="160" loading="lazy" decoding="async" alt=""></li>
+            <li class="logo" style="--h:3.5rem"><img src="assets/parceiros/vertzontal.webp" width="293" height="160" loading="lazy" decoding="async" alt=""></li>
+            <li class="logo" style="--h:1.6rem"><img src="assets/parceiros/groovman.webp" width="1437" height="160" loading="lazy" decoding="async" alt=""></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container partners-foot reveal">
+        <button class="marquee-toggle" type="button" data-marquee-toggle aria-pressed="false">
+          <svg class="icon icon-sm icon-pause" aria-hidden="true"><use href="#i-pause"></use></svg>
+          <svg class="icon icon-sm icon-play" aria-hidden="true"><use href="#i-play"></use></svg>
+          <span>Pausar animação</span>
+        </button>
+      </div>
+    </section>
+
     <!-- Processo -->
     <section class="section" id="processo" aria-labelledby="processo-title">
       <div class="container">
@@ -795,6 +834,71 @@
               <li class="reason reveal"><svg class="icon" aria-hidden="true"><use href="#i-headphones"></use></svg><h3>Suporte dedicado</h3><p>Acompanhamento contínuo e suporte técnico para garantir o sucesso do projecto.</p></li>
             </ul>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Depoimentos
+         ATENÇÃO: nomes, cargos e textos são fictícios (exemplos). Substituir por depoimentos
+         reais, com autorização dos clientes. Não adicionar aos dados estruturados (JSON-LD). -->
+    <section class="section" id="depoimentos" aria-labelledby="depoimentos-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Depoimentos</p>
+          <h2 class="h2" id="depoimentos-title">O que dizem os clientes</h2>
+          <p class="lead">Mais do que entregar um site, procuro resolver o problema certo. Eis o que dizem algumas das pessoas com quem trabalhei.</p>
+        </header>
+        <div class="testimonials">
+          <figure class="quote quote--featured reveal">
+            <p class="quote-tag">Sistema de gestão</p>
+            <blockquote>
+              <p>O Wilson percebeu o nosso negócio antes de escrever uma linha de código. O sistema substituiu as folhas de Excel e hoje toda a equipa trabalha no mesmo sítio. Entregou dentro do prazo e continua disponível sempre que precisamos.</p>
+            </blockquote>
+            <figcaption class="quote-author">
+              <span class="avatar" aria-hidden="true">MD</span>
+              <span><strong>Marta Domingos</strong><span>Directora Geral</span></span>
+            </figcaption>
+          </figure>
+          <figure class="quote reveal" style="--d:.08s">
+            <p class="quote-tag">Site institucional</p>
+            <blockquote>
+              <p>Precisávamos de um site rápido e que aparecesse no Google. Poucas semanas depois do lançamento já recebíamos pedidos pelo formulário.</p>
+            </blockquote>
+            <figcaption class="quote-author">
+              <span class="avatar avatar--accent" aria-hidden="true">EM</span>
+              <span><strong>Edson Mateus</strong><span>Fundador</span></span>
+            </figcaption>
+          </figure>
+          <figure class="quote reveal">
+            <p class="quote-tag">Redesign</p>
+            <blockquote>
+              <p>Comunicação clara do início ao fim. Sabíamos sempre em que fase estava o projecto e o resultado ficou exactamente como imaginámos.</p>
+            </blockquote>
+            <figcaption class="quote-author">
+              <span class="avatar avatar--ink" aria-hidden="true">JC</span>
+              <span><strong>Joana Cardoso</strong><span>Gestora de Marketing</span></span>
+            </figcaption>
+          </figure>
+          <figure class="quote reveal" style="--d:.08s">
+            <p class="quote-tag">Loja virtual</p>
+            <blockquote>
+              <p>A loja ficou elegante e muito fácil de gerir. A formação que o Wilson deu à equipa fez toda a diferença no dia-a-dia.</p>
+            </blockquote>
+            <figcaption class="quote-author">
+              <span class="avatar" aria-hidden="true">PS</span>
+              <span><strong>Paulo Sebastião</strong><span>Director Comercial</span></span>
+            </figcaption>
+          </figure>
+          <figure class="quote reveal" style="--d:.16s">
+            <p class="quote-tag">Sistema web</p>
+            <blockquote>
+              <p>Profissional, organizado e atento aos detalhes. O painel de administração poupa-nos horas de trabalho todas as semanas.</p>
+            </blockquote>
+            <figcaption class="quote-author">
+              <span class="avatar avatar--accent" aria-hidden="true">AL</span>
+              <span><strong>Ana Lukeny</strong><span>Coordenadora de Projectos</span></span>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -980,8 +1084,10 @@
           <ul>
             <li><a href="#servicos">Serviços</a></li>
             <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#clientes">Clientes</a></li>
             <li><a href="#precos">Preços</a></li>
             <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
             <li><a href="#faq">FAQ</a></li>
           </ul>
         </div>
