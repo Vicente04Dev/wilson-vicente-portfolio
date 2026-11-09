@@ -26,6 +26,10 @@ favicon.*, icon-*.png, apple-touch-icon.png, site.webmanifest
 robots.txt, sitemap.xml, llms.txt
 ```
 
+## Ligações dos projectos
+
+Cada projecto do portfólio tem uma ligação "Visitar site" (`class="project-link"` no `index.html`). As que ainda têm `href="#"` ficam escondidas; basta trocar o `#` pelo endereço do site para a ligação aparecer.
+
 ## Formulário de contacto (EmailJS)
 
 O formulário envia as mensagens pelo [EmailJS](https://www.emailjs.com/), configurado em `js/config.js`.
