@@ -15,13 +15,15 @@
 
 - Recrutamento Mwangolé — plataforma de recrutamento com vagas, candidaturas e painel de gestão para empresas (Laravel, Livewire, MySQL, Tailwind CSS).
 - Residencial UTT — site e sistema de reservas para um residencial em Luanda, com pagamentos e relatórios financeiros (Laravel, Livewire, MySQL, Tailwind CSS, Alpine.js).
+- Groovman — Grandes Eventos — plataforma de eventos e bilhética online: venda de bilhetes, bilhetes digitais com QR Code, validação de entradas no telemóvel e gestão de galas de premiação (Laravel, Livewire, MySQL, Tailwind CSS).
 - CGD LDA — site institucional para empresa de gráfica e design (HTML, CSS, JavaScript).
 - Converta — site institucional para consultoria em Recursos Humanos e Advocacia (HTML, CSS, JavaScript).
 - Vitala Clínica Geral — site para clínica médica em Luanda, com marcação de consultas (HTML, CSS, JavaScript).
+- Kilunji Editora — site institucional para editora angolana, com catálogo de livros, autores, lançamentos, pontos de venda, revista científica e submissão de manuscritos (HTML, CSS, JavaScript).
 
 ## Clientes e parceiros
 
-UTT Residencial, Recrutamento Mwangolé, Kilunji, Vertzontal e Groovman Grandes Eventos.
+UTT Residencial, Recrutamento Mwangolé, Kilunji Editora, Vertzontal e Groovman Grandes Eventos.
 
 ## Tecnologias
 
